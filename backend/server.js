@@ -13,6 +13,9 @@ app.use(express.json());
 const projectRoutes = require('./routes/projectRoutes');
 app.use('/api/projects', projectRoutes);
 
+const serviceRoutes = require('./routes/serviceRoutes');
+app.use('/api/services', serviceRoutes);
+
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });

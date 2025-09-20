@@ -3,11 +3,14 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px 32px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: lab(69.14% 2.87 1.02);
+  box-shadow: 0 4px 6px #db09091a;
   position: sticky;
   top: 0;
   z-index: 50;
+  border-radius: 0 0 80px 20px;
+  border: 2px solid oklab(47.99% 0.03818 -0.28775);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .navbar-links {

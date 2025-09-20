@@ -1,42 +1,53 @@
 .home-container {
   text-align: center;
   padding: 60px 20px;
-  background: linear-gradient(135deg, #e0b862, hsl(212, 89%, 45%));
-  min-height: 80vh;
+  background: linear-gradient(135deg, lab(88.88% -0.2 3.77), hwb(76 4% 15%));
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 6px lab(0% 0% 0% / 0.1);
+  border-radius: 70px 5px 70px 5px;
+  margin: 20px;
+  border: 2px solid oklab(47.99% 0.03818 -0.28775);
 }
 
 .home-container h1 {
   font-size: 6rem; /* 64px */
   font-weight: 700;
   color: hsl(180, 2%, 8%); /* gray-800 */
-  margin-bottom: 10px;
- text-shadow: 2px 2px 4px #eb13661a;
+  margin-bottom:5px;
+ text-shadow: 2px 2px 4px lab(63.77% 34.67 69.4 / 0.102);
+
 
 }
 
 .home-container p {
   font-size: 1.25rem; /* 20px */
   color: hwb(332 4% 22%); /* gray-700 */
-  margin-bottom: 30px;
+  margin-bottom:20px
   max-width: 600px;
 }
 
 .home-container a {
   display: inline-block;
-  background-color: #3b82f6; /* blue-500 */
-  color: #fff;
-  padding: 14px 28px;
+  background-color: hsl(217, 91%, 48%); /* blue-500 */
+  color: hsl(150, 3%, 12%);
+  padding: 20px 30px;
   font-weight: 600;
-  border-radius: 8px;
+  border-radius: 40px;
   text-decoration: none;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 6px lab(0% 0% 0% / 0.1);
+  font-size: 1.125rem; /* 18px */
+  letter-spacing: 0.05rem;
+  border: 2px solid oklab(47.99% 0.03818 -0.28775);
+  margin-top: 15px;
 }
 
 .home-container a:hover {
-  background-color: #2563eb; /* blue-600 */
+  background-color: hsl(355, 92%, 39%); /* blue-600 */
   transform: translateY(-2px);
 }
