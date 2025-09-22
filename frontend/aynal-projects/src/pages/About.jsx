@@ -1,21 +1,46 @@
 import React from "react";
+import "./About.css"; // import CSS
 
 export default function About() {
   return (
-    <div className="max-w-3xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4">About Me</h1>
-      <p className="text-gray-700 leading-relaxed">
-        Hi 👋 I’m a passionate <b>MERN Stack Developer</b> with experience in
-        building full-stack web applications using MongoDB, Express, React, and Node.js.
+    <div className="about-container">
+      {/* Header */}
+      <h1 className="about-title">Hey,I am Aynal Haque</h1>
+      <p><strong>A Full Stack Developer From Bangladesh</strong></p>
+
+      {/* Intro */}
+      <p className="about-intro">
+        Hi 👋 I’m a passionate <b>MERN Stack Developer</b> with expertise in{" "}
+        <b>MongoDB, Express, React, Node.js</b> and strong knowledge of{" "}
+        <b>Django</b> as well. I love building full-stack web applications,
+        creating clean UI/UX, and developing scalable backend solutions.
       </p>
 
-      <h2 className="text-2xl font-semibold mt-6 mb-2">Skills</h2>
-      <ul className="list-disc list-inside text-gray-700">
-        <li>Frontend: React.js, TailwindCSS, Bootstrap</li>
-        <li>Backend: Node.js, Express.js</li>
-        <li>Database: MongoDB, Mongoose</li>
-        <li>Other: REST APIs, Git, Docker</li>
-      </ul>
+      {/* Skills Section */}
+      <div className="skills-card">
+        <h2 className="skills-title">My Skills</h2>
+        <ul className="skills-grid">
+          <li>⚡ Frontend: React.js, HTML, CSS, TailwindCSS, Bootstrap</li>
+          <li>⚡ Backend: Node.js, Express.js, Django</li>
+          <li>⚡ Database: MongoDB, Mongoose, MySQL, PostgreSQL</li>
+          <li>⚡ Other: REST APIs, Git/GitHub, Docker</li>
+          <li>⚡ Deployment: Vercel, Netlify, Heroku, AWS</li>
+          <li>⚡ Tools: VS Code, Postman, Figma</li>
+          <li>⚡ Languages: JavaScript, Python, HTML, CSS</li>
+        </ul>
+      </div>
+
+      {/* Future Goals */}
+      <div className="goals-section">
+        <h2 className="goals-title">🚀 My Goals</h2>
+        <p className="goals-text">
+          I aim to keep growing as a developer by exploring <b>Artificial Intelegence</b>, 
+          improving my <b>Machine Learning</b> skills, and contributing to 
+          open-source projects. My long-term vision is to build impactful 
+          applications that solve real-world problems and make technology 
+          more accessible to everyone.
+        </p>
+      </div>
     </div>
   );
 }

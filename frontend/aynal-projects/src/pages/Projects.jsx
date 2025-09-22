@@ -6,6 +6,7 @@ import {
   deleteProject,
 } from "../services/api";
 import ProjectCard from "../components/ProjectCard";
+import "./Projects.css"; // ✅ Import CSS
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);
@@ -42,17 +43,16 @@ export default function Projects() {
   };
 
   return (
-    <div className="p-6">
-      <h1 className="text-2xl mb-4">Projects</h1>
+    <div className="projects-container">
+      <h1 className="projects-title">My Projects</h1>
 
       {/* Create New Project */}
-      <div className="mb-6">
+      <div className="create-form">
         <input
           type="text"
           placeholder="Title"
           value={newProject.title}
           onChange={(e) => setNewProject({ ...newProject, title: e.target.value })}
-          className="border p-2 mr-2"
         />
         <input
           type="text"
@@ -61,33 +61,37 @@ export default function Projects() {
           onChange={(e) =>
             setNewProject({ ...newProject, description: e.target.value })
           }
-          className="border p-2 mr-2"
         />
-        <button
-          onClick={handleCreate}
-          className="bg-green-500 text-white px-4 py-2 rounded"
-        >
-          Add Project
-        </button>
+        <input
+          type="text"
+          placeholder="GitHub Link"
+          value={newProject.github}
+          onChange={(e) =>
+            setNewProject({ ...newProject, github: e.target.value })
+          }
+        />
+        <input
+          type="text"
+          placeholder="Demo Link"
+          value={newProject.demo}
+          onChange={(e) =>
+            setNewProject({ ...newProject, demo: e.target.value })
+          }
+        />
+        <button onClick={handleCreate}>➕ Add Project</button>
       </div>
 
       {/* Projects List */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="projects-grid">
         {projects.map((p) => (
-          <div key={p._id} className="border p-4 rounded shadow">
+          <div key={p._id} className="project-card">
             <ProjectCard project={p} />
-            <div className="mt-2">
-              <button
-                onClick={() => handleUpdate(p._id)}
-                className="bg-blue-500 text-white px-3 py-1 rounded mr-2"
-              >
-                Update
+            <div className="project-actions">
+              <button onClick={() => handleUpdate(p._id)} className="update-btn">
+                ✏️ Update
               </button>
-              <button
-                onClick={() => handleDelete(p._id)}
-                className="bg-red-500 text-white px-3 py-1 rounded"
-              >
-                Delete
+              <button onClick={() => handleDelete(p._id)} className="delete-btn">
+                🗑️ Delete
               </button>
             </div>
           </div>
