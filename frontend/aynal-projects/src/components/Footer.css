@@ -2,39 +2,31 @@
   background-color: lab(46.19% 0.67 -24.42); /* Tailwind's gray-900 */
   color: #ffffff;
   text-align: center;
-  padding:2rem 0; /* py-4 */
+  padding:0.60 rem 0; /* py-4 */
   font-family: Arial, sans-serif;
-   position: absolute;
-   border-radius: 80px 10px 80px 20px;
-  
-   
-   width: 100%;
-   bottom: 0;
-    border: 2px solid oklab(47.99% 0.03818 -0.28775);
+  position: fixed;
+  border-radius: 80px 10px 80px 20px;
+  box-shadow: 10px 10px 30px #b6d40b1a;
+  width: 100%;
+  height: 90px;
+  bottom: 5px;
+  border: 3px solid oklab(76.048% -0.20042 0.14883);
 
-
- 
 }
 p {
     margin: 0;
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: 0.07rem
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.05rem
 
 }
 p:hover {
-    color: lab(44.91% 49.78 27.76); /* Lighter shade on hover */
+    color: lch(44.55% 86.81 38.26); /* Lighter shade on hover */
     transition: color 0.3s ease;
-}
-address {
-    font-style: normal;
-    font-size: 0.875rem;
-    margin-top: 0.25rem;
-    color: hsl(0, 0%, 8%); /* Tailwind's gray-300 */
 }
 
 footer:hover {
-    background-color: lab(47.31% 79.6 -42.89); /* Darker shade on hover */
+    background-color: lch(49.69% 74.36 51.5); /* Darker shade on hover */
     transition: background-color 0.3s ease;
 }
 
